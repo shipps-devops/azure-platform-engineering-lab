@@ -29,7 +29,6 @@ resource "azurerm_public_ip" "public_ip" {
   sku                 = "Standard"
 }
 
-
 resource "azurerm_network_interface" "nic" {
   name                = "nic-vm"
   location            = azurerm_resource_group.rg.location
@@ -73,7 +72,6 @@ resource "azurerm_network_security_group" "nsg" {
   }
 }
 
-
 resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
   network_interface_id      = azurerm_network_interface.nic.id
   network_security_group_id = azurerm_network_security_group.nsg.id
@@ -99,8 +97,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-focal"
-    sku       = "20_04-lts"
+    offer     = "0001-com-ubuntu-server-jammy" # Alterado de 'focal' para 'jammy'
+    sku       = "22_04-lts"                    # Alterado de '20_04-lts' para '22_04-lts'
     version   = "latest"
   }
 }
