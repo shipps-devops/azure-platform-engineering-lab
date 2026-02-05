@@ -1,0 +1,59 @@
+# --- Java & Class Files ---
+*.class
+*.log
+*.ctxt
+
+# --- Maven ---
+target/
+dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.next
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+.mvn/timing.properties
+# Keep this rule in case wrapper is used in the future
+!.mvn/wrapper/maven-wrapper.jar
+
+# --- Archives & Binaries (IMPORTANT) ---
+# Prevent uploading heavy files by mistake
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- IDEs (IntelliJ, VS Code, Eclipse) ---
+*.iml
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+out/
+*.iws
+
+# --- OS Specific (Mac/Windows/Linux) ---
+.DS_Store
+Thumbs.db
+.guano
+
+# --- Logs & Temp ---
+logs/
+*.tmp
+*.bak
+*.swp
+
+# --- Credentials (High Security) ---
+*.pem
+*.key
+*.env
+*.p12
+
+# --- Docker ---
+# Ignore temporary dockerfiles, but keep the official one
+*.dockerfile
+!Dockerfile
+docker-compose.override.yml
